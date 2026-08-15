@@ -1,0 +1,32 @@
+[
+  {
+    "id": "samples-LogicalDeduction-0",
+    "context": "There are five books: green, blue, white, purple, yellow. The blue book is the second from the right. The purple book is the second from the left.",
+    "question": "Which of the following is true?",
+    "answer": "D",
+    "options": [
+      "A) green_book == 2",
+      "B) blue_book == 2",
+      "C) white_book == 2",
+      "D) purple_book == 2",
+      "E) yellow_book == 2"
+    ],
+    "raw_logic_programs": [
+      "Domain:\n1: leftmost\n5: rightmost\nVariables:\ngreen_book [IN] [1, 2, 3, 4, 5]\nblue_book [IN] [1, 2, 3, 4, 5]\nwhite_book [IN] [1, 2, 3, 4, 5]\npurple_book [IN] [1, 2, 3, 4, 5]\nyellow_book [IN] [1, 2, 3, 4, 5]\nConstraints:\nblue_book == 4\npurple_book == 2\nAllDifferentConstraint([green_book, blue_book, white_book, purple_book, yellow_book])\nQuery:\nA) green_book == 2\nB) blue_book == 2\nC) white_book == 2\nD) purple_book == 2\nE) yellow_book == 2"
+    ]
+  },
+  {
+    "id": "samples-LogicalDeduction-1",
+    "context": "Three birds on a branch: quail, owl, raven. The owl is the leftmost. The raven is the rightmost.",
+    "question": "Which of the following is true about the three birds?",
+    "answer": "B",
+    "options": [
+      "A) quail == 3",
+      "B) owl == 1",
+      "C) raven == 1"
+    ],
+    "raw_logic_programs": [
+      "Domain:\n1: leftmost\n3: rightmost\nVariables:\nquail [IN] [1, 2, 3]\nowl [IN] [1, 2, 3]\nraven [IN] [1, 2, 3]\nConstraints:\nowl == 1\nraven == 3\nAllDifferentConstraint([quail, owl, raven])\nQuery:\nA) quail == 3\nB) owl == 1\nC) raven == 1"
+    ]
+  }
+]

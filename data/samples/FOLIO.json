@@ -1,0 +1,22 @@
+[
+  {
+    "id": "samples-FOLIO-0",
+    "context": "Felix is an animal. All animals are living things.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Felix is living.",
+    "answer": "A",
+    "options": ["A) True", "B) False", "C) Uncertain"],
+    "raw_logic_programs": [
+      "Premises:\nAnimal(felix) ::: Felix is an animal.\nforall x (Animal(x) -> Living(x)) ::: All animals are living things.\nConclusion:\nLiving(felix) ::: Felix is living."
+    ]
+  },
+  {
+    "id": "samples-FOLIO-1",
+    "context": "Tom is a cat. All cats are animals.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Tom is not an animal.",
+    "answer": "B",
+    "options": ["A) True", "B) False", "C) Uncertain"],
+    "raw_logic_programs": [
+      "Premises:\nCat(tom) ::: Tom is a cat.\nforall x (Cat(x) -> Animal(x)) ::: All cats are animals.\nConclusion:\n~Animal(tom) ::: Tom is not an animal."
+    ]
+  }
+]

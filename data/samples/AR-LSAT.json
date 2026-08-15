@@ -1,0 +1,16 @@
+[
+  {
+    "id": "samples-AR-LSAT-0",
+    "context": "A furniture store carries chairs in three colors: red, blue, and green. Every chair is exactly one color. The red chair is red.",
+    "question": "The red chair must be which of the following colors?",
+    "answer": "A",
+    "options": [
+      "(A) red",
+      "(B) blue",
+      "(C) green"
+    ],
+    "raw_logic_programs": [
+      "# Declarations\ncolors = EnumSort([red, blue, green])\nchair = Function([colors] -> [colors])\n# Constraints\nchair(red) == red ::: The red chair is red.\n# Options\nis_valid(chair(red) == red) ::: (A)\nis_valid(chair(red) == blue) ::: (B)\nis_valid(chair(red) == green) ::: (C)"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "samples-ProntoQA-0",
+    "context": "Alex is a tumpus. Every tumpus is mean. All mean things are vumpuses.",
+    "question": "True or false: Alex is a vumpus.",
+    "answer": "A",
+    "options": ["A) True", "B) False"],
+    "raw_logic_programs": [
+      "Predicates:\nTumpus($x, bool)\nMean($x, bool)\nVumpus($x, bool)\nFacts:\nTumpus(Alex, True)\nRules:\nTumpus($x, True) >>> Mean($x, True)\nMean($x, True) >>> Vumpus($x, True)\nQuery:\nVumpus(Alex, True)"
+    ]
+  },
+  {
+    "id": "samples-ProntoQA-1",
+    "context": "Bob is round. All round things are rough. Rough things are red.",
+    "question": "True or false: Bob is red.",
+    "answer": "A",
+    "options": ["A) True", "B) False"],
+    "raw_logic_programs": [
+      "Predicates:\nRound($x, bool)\nRough($x, bool)\nRed($x, bool)\nFacts:\nRound(Bob, True)\nRules:\nRound($x, True) >>> Rough($x, True)\nRough($x, True) >>> Red($x, True)\nQuery:\nRed(Bob, True)"
+    ]
+  }
+]

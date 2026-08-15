@@ -1,0 +1,22 @@
+[
+  {
+    "id": "samples-ProofWriter-0",
+    "context": "Anne is furry. All furry things are nice.",
+    "question": "Based on the above information, is the following statement true, false, or unknown? Anne is nice.",
+    "answer": "A",
+    "options": ["A) True", "B) False", "C) Unknown"],
+    "raw_logic_programs": [
+      "Predicates:\nFurry($x, bool)\nNice($x, bool)\nFacts:\nFurry(Anne, True)\nRules:\nFurry($x, True) >>> Nice($x, True)\nQuery:\nNice(Anne, True)"
+    ]
+  },
+  {
+    "id": "samples-ProofWriter-1",
+    "context": "The cat sees the mouse. If someone sees the mouse then they chase it.",
+    "question": "Based on the above information, is the following statement true, false, or unknown? The cat is green.",
+    "answer": "C",
+    "options": ["A) True", "B) False", "C) Unknown"],
+    "raw_logic_programs": [
+      "Predicates:\nSees($x, $y, bool)\nChases($x, $y, bool)\nGreen($x, bool)\nFacts:\nSees(Cat, Mouse, True)\nRules:\nSees($x, $y, True) >>> Chases($x, $y, True)\nQuery:\nGreen(Cat, True)"
+    ]
+  }
+]
