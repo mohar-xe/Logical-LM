@@ -1,0 +1,20 @@
+# virtualenv / build
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# fetched data + outputs (regenerate via logiclm download-data / run)
+data/raw/
+outputs/
+
+# solver caches
+*.parquet
+
+# misc
+.DS_Store
+
+# editor / agent config
+.claude/
