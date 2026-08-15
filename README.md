@@ -63,14 +63,14 @@ uv sync --extra llm
 uv run logiclm download-data                 # fetch + normalize all 5 datasets
 
 # with an OpenAI key
-uv run logiclm run --dataset FOLIO --split dev --llm openai --model gpt-4o-mini \
+uv run logiclm run --dataset FOLIO --split dev --llm openai \
     --backup random
 
 # with a local Ollama server
-uv run logiclm run --dataset AR-LSAT --split dev --llm ollama --model qwen3:32b
+uv run logiclm run --dataset AR-LSAT --split dev --llm ollama
 
 # self-refinement (paper ships templates for FOLIO and AR-LSAT)
-uv run logiclm run --dataset FOLIO --split dev --llm openai --model gpt-4o-mini \
+uv run logiclm run --dataset FOLIO --split dev --llm openai \
     --max-refine-rounds 3
 ```
 
@@ -99,7 +99,7 @@ logiclm evaluate outputs/logic_inference/FOLIO.json
 | Flag | Meaning |
 |---|---|
 | `--llm {mock,openai,anthropic,ollama}` | LLM backend (mock runs offline) |
-| `--model` | model name (e.g. `gpt-4o-mini`, `claude-sonnet-4-5`, `qwen3:32b`) |
+| `--model` | model name |
 | `--api-key` / `--base-url` | credentials / Ollama URL (defaults to env vars) |
 | `--backup {random,LLM}` | fallback on solver failure |
 | `--backup-llm-path` | results file for the `LLM` backup strategy |
